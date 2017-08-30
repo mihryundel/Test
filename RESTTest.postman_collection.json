@@ -1,0 +1,252 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RESTTest",
+		"_postman_id": "87e9f62f-a901-831d-0a97-4c01fd36cd79",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"request": {
+				"url": "http://localhost:8080/api/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"\",\n\t\"lastName\": \"\",\n\t\"dateOfBirth\": \"yyyy-MM-dd\",\n\t\"dateOfStartWork\": \"yyyy-MM-dd\",\n\t\"employeeDepartment\": {\n        \"id\": \"\",\n        \"departmentName\": \"\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Department",
+			"request": {
+				"url": "http://localhost:8080/api/departments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"departmentName\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"url": "http://localhost:8080/api/employees/{id}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  Department",
+			"request": {
+				"url": "http://localhost:8080/api/departments/{id}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"url": "http://localhost:8080/api/employees/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Departments",
+			"request": {
+				"url": "http://localhost:8080/api/departments/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find Employee by First Name",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/employees/search/findByFirstName?firstName={firstName}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"search",
+						"findByFirstName"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "{firstName}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find Employee by Last Name",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/employees/search/findByLastName?lastName={lastName}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"search",
+						"findByLastName"
+					],
+					"query": [
+						{
+							"key": "lastName",
+							"value": "{lastName}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find Department by Name",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/departments/search/findByName?name=Chocolate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departments",
+						"search",
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Chocolate",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"url": "http://localhost:8080/api/employees/{id}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"\",\n        \"firstName\": \"\",\n        \"lastName\": \"\",\n        \"dateOfBirth\": \"yyyy-MM-dd\",\n\t\t\"dateOfStartWork\": \"yyyy-MM-dd\",\n        \"employeeCode\": \"\",\n        \"employeeDepartment\": {\n            \"id\": null,\n            \"departmentName\": \"\"\n        }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Department",
+			"request": {
+				"url": "http://localhost:8080/api/departments/{id}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"\",\n        \"name\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
